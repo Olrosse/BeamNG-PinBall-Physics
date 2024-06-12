@@ -6,7 +6,7 @@ local positionoffset = v.data.nodes[v.data.refNodes[0].ref].pos
 
 --Variables
 
-local isEnabled = true
+local isEnabled = false
 local forceMultiplier = 1
 
 M.enableDebugDraw = false
@@ -136,7 +136,7 @@ local function calculateForce(dt)
 			collisionDir = collisionDir + (-((mapmgrData.pos - vehData.offset:rotated(rot)) - vehiclePosition):normalized())
 			local massOffset = max(0.3,1 + ((vehData.mass-mass)*0.0001))
 			local force = abs(collisionForce)*massOffset
-	
+
 			totalForce = totalForce + force
 			collisionDetected = true
 		end
@@ -230,14 +230,26 @@ local function updateGFX(dt)
 end
 
 local function setEnabled(state)
-	isEnabled = state or true
+	if state == false then
+		isEnabled = false
+	else
+		isEnabled = true
+	end
+end
+
+local function getIsEnabled()
+	return isEnabled
 end
 
 local function setforceMultiplier(numnber)
+	if type(numnber) == "string" then
+		numnber = tonumber(numnber)
+	end
 	forceMultiplier = numnber or 1
 end
 
 M.setEnabled = setEnabled
+M.getIsEnabled = getIsEnabled
 M.setforceMultiplier = setforceMultiplier
 M.getPosOffset = getPosOffset
 M.setPosOffset = setPosOffset
