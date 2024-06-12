@@ -156,22 +156,22 @@ local function drawBoundingBox()
     drawDebug:drawSphere(0.1 , obj:getPosition(), color(0,255,0,200))
     drawDebug:drawSphere(0.1 , obj:getPosition() - (carCenter):rotated(quat(obj:getRotation())), detectcolor)
 
-	--front left top
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y+(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--front right top
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y+(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--front left bottom
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y+(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--front right bottom
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y+(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--rear left top
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y-(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--rear right top
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y-(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--rear left bottom
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y-(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
-	--rear right bottom
-	drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y-(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----front left top
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y+(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----front right top
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y+(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----front left bottom
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y+(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----front right bottom
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y+(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----rear left top
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y-(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----rear right top
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y-(carLength/2),carCenter.z-(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----rear left bottom
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x-(carWidth/2),carCenter.y-(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
+	----rear right bottom
+	--drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x+(carWidth/2),carCenter.y-(carLength/2),carCenter.z+(carHeight/2))):rotated(quat(obj:getRotation())), detectcolor)
 
     drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x,carCenter.y+(carLength/2),carCenter.z)):rotated(quat(obj:getRotation())), detectcolor)
     drawDebug:drawSphere(0.1 , obj:getPosition() - (vec3(carCenter.x,carCenter.y-(carLength/2),carCenter.z)):rotated(quat(obj:getRotation())), detectcolor)

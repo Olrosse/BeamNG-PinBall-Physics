@@ -14,7 +14,7 @@ local function updateVehicles()
 end
 
 local function enablePinBallPhysics(bolean)
-    if type(bolean) == "string" then
+    if type(bolean) == "string" then -- server event arrives as string
         if bolean == "true" then
             PinBallEnabled = true
         else
@@ -29,7 +29,7 @@ local function enablePinBallPhysics(bolean)
 end
 
 local function disablePinBallPhysics(bolean)
-    if type(bolean) == "string" then
+    if type(bolean) == "string" then -- server event arrives as string
         if bolean == "true" then
             PinBallEnabled = false
         else
@@ -44,9 +44,11 @@ local function disablePinBallPhysics(bolean)
 end
 
 local function PinBallPhysics_multiplier(number)
-    number = tonumber(number)
-    if type(number) ~= "number" then
-        return
+    if type(number) == "string" then -- server event arrives as string
+        number = tonumber(number)
+        if type(number) ~= "number" then
+            return
+        end
     end
     multiplier = number
     updateVehicles()
